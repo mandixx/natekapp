@@ -26,6 +26,20 @@ class Database
         }
         return false;
     }
+
+    public function insert($query = "", $params = [])
+    {
+        try {
+            $stmt = $this->executeStatement( $query , $params );
+            $result = $stmt->store_result();
+            $result_id = $stmt->insert_id;
+            $stmt->close();
+            return ['success' => $result, 'insert_id' => $result_id];
+        } catch(Exception $e) {
+            throw New Exception( $e->getMessage() );
+        }
+        return false;
+    }
     private function executeStatement($query = "" , $params = [])
     {
         try {
