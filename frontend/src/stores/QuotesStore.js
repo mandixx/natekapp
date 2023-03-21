@@ -1,6 +1,6 @@
 import { mande } from 'mande'
 import { defineStore } from 'pinia'
-const api = mande('http://localhost/natekapp/backend/index.php/quotes/list?XDEBUG_SESSION_START=PHPSTORM')
+const api = mande(import.meta.env.VITE_BACKEND_BASE_URL + '/index.php/quotes/list')
 export const useQuotesStore = defineStore('quotes', {
   state: () => ({
     loading: false,
