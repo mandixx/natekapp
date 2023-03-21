@@ -1,6 +1,8 @@
 # Natek Recruitment
 `cd backend`
 
+Open backend/Inc/config.php - configure your SQL server
+
 Run migration
 
 `php migrate.php` 
