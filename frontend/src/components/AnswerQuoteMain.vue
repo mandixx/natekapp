@@ -1,15 +1,28 @@
 <script setup>
 import { useQuotesStore } from '../stores/QuotesStore'
 import { computed, ref } from "vue";
+
+const delayBeforeNextQuote = 1500;
+
+// Get the Quotes Store
 const store = useQuotesStore();
+// Define the events that this component emits
 const emit = defineEmits(['score'])
 
-let answerInfoMessage = ref('DEF');
-let answered = ref(false);
+// The message we show if the user has guessed right or wrong on the quote
+const answerInfoMessage = ref('');
+/**
+ * Variable that helps us capture the transition from whenever user clicked on an answer and we show next quote ( currently 1.5s delay )
+ * --- true whenever we are in this period
+ * --- false if user is currently choosing an answer to click 
+ */
+const answered = ref(false);
+// Used to determine if a user clicked a correct answer, so we can apply correct color on the answerInfoMessage
 const answerIsCorrect = computed(() => {
     return answerInfoMessage.value.startsWith('Correct');
 });
 
+// Shuffles the answsers on each quote before we display them to the user
 const randomisedAnswers = computed(() => {
     let array = store.currentQuote.answers;
     for (var i = array.length - 1; i > 0; i--) {
@@ -21,10 +34,12 @@ const randomisedAnswers = computed(() => {
     return array
 });
 
+// Whenever user clicks an answer
 const handleAnswer = (event) => {
+  // The event is on the parrent div ( for performance, currently not needed but imagine we have 1000 options to choose from ? )
   const answerClicked = event.target.innerHTML;
   const answerExists = store.currentQuote.answers.find((element) => element.answer === answerClicked);
-  // We actually clied a box with answer and not the div background
+  // We actually clicked a box with answer and not the div background
   if(answerExists && !answered.value) {
     answered.value = true;
     const answerIsCorrect = answerExists.correct;
@@ -45,7 +60,7 @@ const handleAnswer = (event) => {
         emit('score');
       }
 
-    }, 1500);
+    }, delayBeforeNextQuote);
   }
 }
 

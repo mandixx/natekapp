@@ -10,8 +10,8 @@ onBeforeMount(() => {
   store.getQuotes();
 });
 
-let currentTabComponent = ref(AnswerQuoteMain)
-// let currentTabComponent = ref(AnswerQuoteScore)
+// Variable that stores what component are we showing currently ( Quote with Answers, Score Component )
+const currentTabComponent = ref(AnswerQuoteMain)
 
 // Switch from Quote select to score
 const changeToScore = () => {

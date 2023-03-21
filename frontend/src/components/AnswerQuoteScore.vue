@@ -1,7 +1,9 @@
 <script setup>
 import { useQuotesStore } from '../stores/QuotesStore'
-import { onBeforeMount, defineEmits, ref } from "vue";
+import { defineEmits } from "vue";
+// Get the Quotes Store
 const store = useQuotesStore();
+// Define the events that this component emits
 const emit = defineEmits(['restart'])
 </script>
 
