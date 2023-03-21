@@ -54,7 +54,8 @@ try {
             'answers' => [
                 ['answer' => 'Nelson Mandela', 'correct' => 1],
                 ['answer' => 'Diego Maradona', 'correct' => 0],
-                ['answer' => 'Cristiano Ronaldo', 'correct' => 0]
+                ['answer' => 'Cristiano Ronaldo', 'correct' => 0],
+                ['answer' => 'Helen Keller', 'correct' => 0],
             ]
         ],
         [
@@ -80,7 +81,8 @@ try {
             'answers' => [
                 ['answer' => 'James Cameron', 'correct' => 1],
                 ['answer' => 'Diego Maradona', 'correct' => 0],
-                ['answer' => 'Nelson Mandela', 'correct' => 0]
+                ['answer' => 'Nelson Mandela', 'correct' => 0],
+                ['answer' => 'Helen Keller', 'correct' => 0],
 
             ]
         ],
@@ -100,7 +102,6 @@ try {
                 ['answer' => 'Robert Louis Stevenson', 'correct' => 0],
                 ['answer' => 'Eleanor Roosevelt', 'correct' => 0],
                 ['answer' => 'Helen Keller', 'correct' => 0],
-                ['answer' => 'Anne Frank', 'correct' => 0],
             ]
         ],
         [
@@ -119,6 +120,7 @@ try {
                 ['answer' => 'Maya Angelou', 'correct' => 1],
                 ['answer' => 'Ralph Waldo Emerson', 'correct' => 0],
                 ['answer' => 'Eleanor Roosevelt', 'correct' => 0],
+                ['answer' => 'Helen Keller', 'correct' => 0],
             ]
         ],
         [
@@ -136,6 +138,7 @@ try {
                 ['answer' => 'Helen Keller', 'correct' => 1],
                 ['answer' => 'Abraham Lincoln', 'correct' => 0],
                 ['answer' => 'Dr. Seuss', 'correct' => 0],
+                ['answer' => 'Helen Karalel', 'correct' => 0],
             ]
         ]
     ]);
