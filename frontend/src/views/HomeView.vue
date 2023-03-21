@@ -138,7 +138,6 @@ body {
   height: 200px;
   display: inline-block;
   overflow: hidden;
-  /* background: #f1f2f3; */
 }
 .ldio-hit7qhu47pq {
   width: 100%;
