@@ -1,7 +1,7 @@
 # Natek Recruitment
 `cd backend`
 
-Open backend/Inc/config.php - configure your SQL server
+Open backend/Inc/config.php - configure your SQL Credentials
 
 Run migration
 
